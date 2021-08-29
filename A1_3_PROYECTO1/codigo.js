@@ -1,0 +1,1 @@
+alert("segundo mensaje. mensaje desde archivo externo codigo.js")
