@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var num1 = parseInt(prompt("Número 1:"));
+        var num2 = parseInt(prompt("Número 2:"));
+
+        alert(typeof(num1));
+        alert(typeof(num2));
+
+        // isNaN() : is Not a Number  // por lo tanto preguntamos si no son números.  
+        if(isNaN(num1) || isNaN(num2)){ alert("Error. Ingresastes valores no numéricos"); }
+        
+        else{
+            var op = prompt("Qué operación quieres realizar? suma/resta/multiplicación/división").toLowerCase();
+            
+            if(op=="suma"){alert(num1+num2);}
+            else if(op=="resta"){alert(num1-num2);}
+            else if(op=="multiplicación" || op=="multiplicacion"){alert(num1*num2);}
+            else if(op=="división" || op=="division"){alert(num1/num2);}
+            else{alert("Operación no contemplada");}
+        }
+
+    </script>
+
+</head>
+<body id="body"> 
+   
+    <script>
+         var body = document.getElementById("body");
+        body.style.backgroundColor = "blue";
+
+    </script>
+
+</body>
+</html>
