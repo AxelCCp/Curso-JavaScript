@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script src="Jquery/jquery-1.6.3.min.js"></script>
+    <script>
+        $(function(){
+            $("body").hide().fadeIn(3000);
+        })
+        </script>
+
+    <style>
+        body{
+            background-color: rgb(61, 61, 61);
+        }
+        .colorDisplay{
+            background-color: darkgray;
+            height: 30px;
+            border:medium rgb(218, 218, 218);
+            font: "Space Age";
+            color:rgb(192, 255, 190);
+            font-size: 15px;
+            text-align: right;
+            padding: 5px;
+        }
+        .opMath{
+            background-color:rgb(148, 148, 148);
+            height: 76px;
+            width: 76px;
+            color:gold;
+            font-size: 30px;
+        }
+        .num{
+            background-color:rgb(148, 148, 148);
+            height: 76px;
+            width: 76px;
+            color:rgb(206, 255, 235);
+            font-size: 30px;
+        }
+        .igual{
+            background-color:rgb(109, 109, 109);
+            height: 76px;
+            width: 152px;
+            color:rgb(0, 255, 0);
+            font-size: 30px;
+        }
+
+        .mensaje{
+            color: azure;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <br/><br/><br/><br/><br/><br/>
+    <table align="center" border="0" width="5%">
+        <tr>
+            <td colspan="4" align="center">
+                <input name="display" type="text" class="colorDisplay" id="display" size="35">
+            </td>
+        </tr>
+        <tr>
+            <td width="25%"><input name="boton1" type="button" class="opMath" id="suma" value="+"></td>
+            <td width="25%"><input name="boton1" type="button" class="opMath" id="rest" value="-"></td>
+            <td width="25%"><input name="boton1" type="button" class="opMath" id="mult" value="*"></td>
+            <td width="25%"><input name="boton1" type="button" class="opMath" id="div" value="/"></td>
+        </tr>
+        <tr>
+            <td width="25%"><input name="7" type="button" class="num" id="num7" value="7"></td>
+            <td width="25%"><input name="8" type="button" class="num" id="num8" value="8"></td>
+            <td width="25%"><input name="9" type="button" class="num" id="num9" value="9"></td>
+        </tr>
+        <tr>
+            <td width="25%"><input name="4" type="button" class="num" id="num4" value="4"></td>
+            <td width="25%"><input name="5" type="button" class="num" id="num5" value="5"></td>
+            <td width="25%"><input name="6" type="button" class="num" id="num6" value="6"></td>
+        </tr>
+        <tr>
+            <td width="25%"><input name="1" type="button" class="num" id="num1" value="1"></td>
+            <td width="25%"><input name="2" type="button" class="num" id="num2" value="2"></td>
+            <td width="25%"><input name="3" type="button" class="num" id="num3" value="3"></td>
+        </tr>
+        <tr>
+            <td width="25%"><input name="0" type="button" class="num" id="num0" value="0"></td>
+            <td width="25%"><input name="punto" type="button" class="opMath" id="decimal" value="."></td>
+            <td colspan="2"><input name="igual" type="button" class="igual" id="igual" value="="></td>
+        </tr>
+    </table>
+
+   
+        <h4 class="mensaje">En desarrollo ...</h4>
+    
+</body>
+</html>
