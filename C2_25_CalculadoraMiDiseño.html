@@ -53,6 +53,66 @@
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
     </style>
+
+    <script>
+        
+        var cifra = "";
+        var acumulado = 0;
+        var primeraOperacion=true;
+        var sumar = false;
+        var restar =false;
+
+        function displayNumeros(numero){
+            document.getElementById("display").value=cifra + numero;
+            cifra=document.getElementById("display").value;
+        }
+
+        function suma(){
+
+            if(restar){
+                acumulado = acumulado - parseInt(cifra);
+                document.getElementById("display").value=acumulado;
+            }else{
+                acumulado = acumulado + parseInt(cifra);
+                document.getElementById("display").value=acumulado;
+            }
+           
+            cifra="";
+            sumar=true;
+        }
+
+        function resta(){
+            if(primeraOperacion==false){
+                if(sumar){
+                    acumulado = acumulado + parseInt(cifra);
+                    document.getElementById("display").value=acumulado;
+                }else{
+                    acumulado = acumulado - parseInt(cifra);
+                    document.getElementById("display").value=acumulado;
+                }
+            }else{
+                acumulado=parseInt(cifra);
+                primeraOperacion=false;
+            }
+            cifra="";
+            sumar="false";
+            restar=true;
+        }
+
+        function resultado(){
+            if(sumar){
+                document.getElementById("display").value=acumulado+parseInt(cifra);
+            }
+            else if (restar){
+                document.getElementById("display").value=acumulado-parseInt(cifra);
+            }
+            acumulado=parseInt(document.getElementById("display").value);
+            cifra=0;
+        }
+
+        
+
+    </script>
 </head>
 <body>
     <br/><br/><br/><br/><br/><br/>
@@ -63,33 +123,36 @@
             </td>
         </tr>
         <tr>
-            <td width="25%"><input name="boton1" type="button" class="opMath" id="suma" value="+"></td>
-            <td width="25%"><input name="boton1" type="button" class="opMath" id="rest" value="-"></td>
+            <td width="25%"><input name="boton1" type="button" class="opMath" id="suma" value="+" onclick="suma()"></td>
+            <td width="25%"><input name="boton1" type="button" class="opMath" id="rest" value="-" onclick="resta()"></td>
             <td width="25%"><input name="boton1" type="button" class="opMath" id="mult" value="*"></td>
             <td width="25%"><input name="boton1" type="button" class="opMath" id="div" value="/"></td>
         </tr>
         <tr>
-            <td width="25%"><input name="7" type="button" class="num" id="num7" value="7"></td>
-            <td width="25%"><input name="8" type="button" class="num" id="num8" value="8"></td>
-            <td width="25%"><input name="9" type="button" class="num" id="num9" value="9"></td>
+            <td width="25%"><input name="7" type="button" class="num" id="num7" value="7" onclick="displayNumeros(7)"></td>
+            <td width="25%"><input name="8" type="button" class="num" id="num8" value="8" onclick="displayNumeros(8)"></td>
+            <td width="25%"><input name="9" type="button" class="num" id="num9" value="9" onclick="displayNumeros(9)"></td>
         </tr>
         <tr>
-            <td width="25%"><input name="4" type="button" class="num" id="num4" value="4"></td>
-            <td width="25%"><input name="5" type="button" class="num" id="num5" value="5"></td>
-            <td width="25%"><input name="6" type="button" class="num" id="num6" value="6"></td>
+            <td width="25%"><input name="4" type="button" class="num" id="num4" value="4" onclick="displayNumeros(4)"></td>
+            <td width="25%"><input name="5" type="button" class="num" id="num5" value="5" onclick="displayNumeros(5)"></td>
+            <td width="25%"><input name="6" type="button" class="num" id="num6" value="6" onclick="displayNumeros(6)"></td>
         </tr>
         <tr>
-            <td width="25%"><input name="1" type="button" class="num" id="num1" value="1"></td>
-            <td width="25%"><input name="2" type="button" class="num" id="num2" value="2"></td>
-            <td width="25%"><input name="3" type="button" class="num" id="num3" value="3"></td>
+            <td width="25%"><input name="1" type="button" class="num" id="num1" value="1" onclick="displayNumeros(1)"></td>
+            <td width="25%"><input name="2" type="button" class="num" id="num2" value="2" onclick="displayNumeros(2)"></td>
+            <td width="25%"><input name="3" type="button" class="num" id="num3" value="3" onclick="displayNumeros(3)"></td>
         </tr>
         <tr>
-            <td width="25%"><input name="0" type="button" class="num" id="num0" value="0"></td>
+            <td width="25%"><input name="0" type="button" class="num" id="num0" value="0" onclick="displayNumeros(0)"></td>
             <td width="25%"><input name="punto" type="button" class="opMath" id="decimal" value="."></td>
-            <td colspan="2"><input name="igual" type="button" class="igual" id="igual" value="="></td>
+            <td colspan="2"><input name="igual" type="button" class="igual" id="igual" value="=" onclick="resultado()"></td>
         </tr>
     </table>
 
+    <script>
+        document.getElementById("display").value=0;
+    </script>
    
         <h4 class="mensaje">En desarrollo ...</h4>
     
