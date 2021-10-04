@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .miContenedor{
+            background-color: blueviolet;
+        }
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //CON ESTO SALE EL CONTENIDO DE LAS ETIQUETAS H2 CON SUS ETIQUETAS H2
+            alert($("#errores").html());
+            //CON ESTO SALE EL CONTENIDO DE LAS ETIQUETAS H2 SIN SUS ETIQUETAS H2. USANDO SELECTOR DESCENDIENTE.
+            alert($("#errores h2").html());
+            //REEMPLAZAMOS <h2>Errores</h2>, POR UN PÁRRAFO X
+            $("#errores").html("<p> hay errores en el formulario</p>");
+            //AGREGAMOS PÁRRAFO DESPUÉS DEL PÁRRAFO 
+            $("#errores").append("<p> Este es otro va DESPUÉS del párrafo</p>");
+            //AGREGAMOS PÁRRAFO ANTES DEL PÁRRAFO 
+            $("#errores").prepend("<p> Este es otro va ANTES del párrafo</p>");
+            //AGREGAMOS PÁRRAFO ANTES DEL ELEMENTO 
+            $("#errores").before("<p> Este es otro va ANTES del ELEMENTO DIV</p>");
+            //AGREGAMOS PÁRRAFO ANTES DEL ELEMENTO 
+            $("#errores").after("<p> Este es otro va DESPUÉS del ELEMENTO DIV</p>");
+            //SUSTITUYE UN TEXTO POR OTRO
+            // $("#errores h2").text("párrafo sustituido con función text()");
+            
+
+        });
+    </script>
+</head>
+<body>
+    <div id="contenedor">
+        <div id="errores" class="miContenedor">
+            <h2>Errores</h2>
+        </div>
+    </div>
+</body>
+</html>

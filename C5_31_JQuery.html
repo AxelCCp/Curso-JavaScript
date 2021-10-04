@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //hide() : BUCLE AUTOMÁTICO DE JQUERY.
+            $("#carrete img").hide();
+        });
+    </script>
+
+</head>
+<body>
+    <div id="carrete">
+        <img src="imgs/boo.jpg" wisth="250" height="250">
+        &nbsp;
+        <img src="imgs/boo.jpg" wisth="250" height="250">
+        &nbsp;
+        <img src="imgs/boo.jpg" wisth="250" height="250">
+        &nbsp;
+        <img src="imgs/boo.jpg" wisth="250" height="250">
+        &nbsp;
+    </div>
+    <!--
+    <script>
+        //querySelectorAll CONVIERTE A "imagenes" EN UN ARRAY.
+        var imagenes=document.querySelectorAll("#carrete img");
+        for(var i=0; i<imagenes.length; i++){
+            imagenes[i].style.visibility="hidden";
+        }
+    </script>
+    -->
+</body>
+</html>
